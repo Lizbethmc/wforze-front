@@ -1,22 +1,25 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Create, Home, HomeCreate } from "pages";
-import { FormExample } from "pages/formExample";
-import Navbar from "components/Navbar";
-import "./App.css";
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/edit" element={<Create />} />
-        <Route path="/home-create/" element={<HomeCreate />} />
-        <Route path="/edit/:id" element={<Create />} />
-        <Route path="/form" element={<FormExample />} />
-      </Routes>
-    </BrowserRouter>
-  );
+    return (
+        <div className="App">
+            <header className="App-header">
+                <img src={logo} className="App-logo" alt="logo" />
+                <p>
+                    Edit <code>src/App.js</code> and save to reload.
+                </p>
+                <a
+                    className="App-link"
+                    href="https://reactjs.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Learn React
+                </a>
+            </header>
+        </div>
+    );
 }
 
 export default App;
