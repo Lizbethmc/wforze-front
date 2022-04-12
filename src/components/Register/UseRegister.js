@@ -1,5 +1,4 @@
 import {useState} from 'react';
-import './Style.css';
 
 const useRegister = validate => {
 
@@ -29,7 +28,7 @@ const useRegister = validate => {
 
 
     return ({
-        setValues,
+        isSubmitting,
         values,
         errors,
         setErrors,
