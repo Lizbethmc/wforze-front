@@ -3,13 +3,13 @@ import useRegister from "./UseRegister";
 import validate from "./ValidateInfo";
 import './Style.css';
 
-const Register = () => {
+const Register = (submitForm) => {
     const {
         values,
         errors,
         handleChange,
         handleSubmit
-    } = useRegister(validate); // importado del otro archivo, y destructurado
+    } = useRegister(validate, submitForm); // importado del otro archivo, y destructurado
 
     return (
         <div className='registrationForm_container'>
@@ -27,7 +27,7 @@ const Register = () => {
                         {errors.email && <p>{errors.email}</p>}
                     </div>
 
-                    <div>
+                    <div className='form-inputs'>
                         <label htmlFor='password' className='form-label'>
                             <h3>Contraseña</h3>
                         </label>
@@ -36,7 +36,7 @@ const Register = () => {
                         {errors.password && <p>{errors.password}</p>}
                     </div>
 
-                    <div>
+                    <div className='form-inputs'>
                         <label htmlFor='password2' className='form-label'>
                             <h3>Confirmacion de Contraseña</h3>
                         </label>
@@ -44,9 +44,11 @@ const Register = () => {
                                placeholder='Enter your password2' value={values.password2} onChange={handleChange}/>
                         {errors.password2 && <p>{errors.password2}</p>}
                     </div>
+
                     <button className='form-input-btn' type='submit'>Registrar</button>
+
                     <span className='form-input-login'>
-                        ¿Ya tienes cuenta existente?<a href=''>Iniciar Sesion</a>
+                        ¿Ya tienes cuenta existente? <a href=''>Iniciar Sesion</a>
                     </span>
                 </form>
             </div>

@@ -1,5 +1,4 @@
-
-import Register from './Register/Register';
+import Form from './Register/Form';
 import './App.css';
 
 import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
@@ -11,7 +10,7 @@ import "primeicons/primeicons.css";                                //icons
 function App() {
     return (
         <div className="App">
-            <Register />
+            <Form />
         </div>
     );
 }

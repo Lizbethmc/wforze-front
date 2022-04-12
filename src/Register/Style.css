@@ -1,17 +1,3 @@
-/*.navbar {
-    background-color: #FFA62B;
-    width: 100px;
-    height: 935px;
-}
-.form {
-    background-color: #F6F6F6;
-
-
-}
-.body{
-    margin: auto;
-}*/
-
-.registrationForm_container {
-
+.registrationForm_container .form-inputs p{
+    color: red;
 }
