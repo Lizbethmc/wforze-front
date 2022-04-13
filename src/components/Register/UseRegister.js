@@ -1,40 +1,50 @@
-import {useState} from 'react';
+import { useState } from "react";
+import axios from "axios";
 
-const useRegister = validate => {
+const useRegister = (validate) => {
+  const [values, setValues] = useState({
+    email: "",
+    password: "",
+    password2: "",
+  });
 
-    const [values, setValues] = useState({
-        email: '',
-        password: '',
-        password2: ''
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [backend, setBackend] = useState('');
+  console.log(backend);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValues({
+      ...values,
+      [name]: value,
     });
+  };
 
-    const [errors, setErrors] = useState({})
-    const [isSubmitting, setIsSubmitting] = useState(false)
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-    const handleChange = e => {
-        const {name, value} = e.target
-        setValues({
-            ...values,
-            [name]:value
-        })
-    };
+    axios       
+    .get("https://mymoney15.herokuapp.com/api/v1/users", 
+    {
+        email: values.email,
+        password: values.password
+    })       
+    .then((res) => setBackend(res))       
+    .catch((err) => console.log(err));   
 
-    const handleSubmit = e => {
-        e.preventDefault();
+    setErrors(validate(values));
+    setIsSubmitting(true);
+  };
 
-        setErrors(validate(values));
-        setIsSubmitting(true)
-    };
-
-
-    return ({
-        isSubmitting,
-        values,
-        errors,
-        setErrors,
-        handleChange,
-        handleSubmit
-    })
-}
+  return {
+    isSubmitting,
+    values,
+    errors,
+    setErrors,
+    handleChange,
+    handleSubmit,
+  };
+};
 
 export default useRegister;
