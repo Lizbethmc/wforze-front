@@ -25,7 +25,7 @@ const useRegister = (validate) => {
     e.preventDefault();
 
     axios       
-    .get("https://mymoney15.herokuapp.com/api/v1/users", 
+    .post("https://mymoney15.herokuapp.com/api/v1/users", 
     {
         email: values.email,
         password: values.password
