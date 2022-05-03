@@ -1,6 +1,4 @@
 import "./App.css";
-
-import Form from "./components/Form/Form";
 import Cuentas from "pages/Cuentas";
 
 import "primeicons/primeicons.css"; //icons
