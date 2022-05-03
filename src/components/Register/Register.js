@@ -68,7 +68,7 @@ const Register = (submitForm) => {
 
         <span className="form-input-login">
           ¿Ya tienes cuenta existente?{" "}
-          <a href="http://google.com">Iniciar Sesion</a>
+          <a href="http://google.com">Iniciar Sesión</a>
         </span>
       </form>
     </div>

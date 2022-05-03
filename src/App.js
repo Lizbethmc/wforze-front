@@ -1,19 +1,22 @@
-import './App.css';
+import "./App.css";
 
-import Form from './components/Form/Form'
+import Form from "./components/Form/Form";
+import Cuentas from "pages/Cuentas";
 
-import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
-import "primereact/resources/primereact.min.css";                  //core css
-import "primeicons/primeicons.css";                                //icons
+import "primeicons/primeicons.css"; //icons
 
-
+import Home from "./pages/Home";
+import Ingresos from "./pages/Ingresos";
+import bootstrap from "bootstrap";
+import Sidebar from "components/Sidebar/Sidebar";
 
 function App() {
-    return (
-        <div className="App">
-            <Form />
-        </div>
-    );
+  return (
+    <div className="App">
+      <Sidebar />
+      <Cuentas />
+    </div>
+  );
 }
 
 export default App;

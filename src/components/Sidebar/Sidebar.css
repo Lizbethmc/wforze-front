@@ -1,0 +1,29 @@
+.sidebar-container{
+    display: flex;
+  }
+  
+  
+  .sidebar{
+    width: 14rem;
+    height: calc(100vh - 52px);
+    background-color: #82C0CC;
+  }
+  
+  ul{
+    list-style: none;
+    padding: 1rem 2rem;
+  }
+  
+  li{
+    margin-bottom: 1rem;
+  }
+  
+  .sidebar a{
+    text-decoration: none;
+  }
+  
+  .sidebar a:hover{
+    text-decoration: none;
+    background-color: #16697A;
+    color: #ffffff;
+  }
