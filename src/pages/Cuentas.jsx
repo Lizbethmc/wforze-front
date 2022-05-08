@@ -1,20 +1,18 @@
 import React from "react";
-import Sidebar from "../components/Sidebar/Sidebar";
-import Navbar from "components/Navbar/Navbar";
+// import Navbar from "components/Navbar/Navbar";
 import "./Cuentas.css";
-import bootstrap from "bootstrap";
+//import bootstrap from "bootstrap";
 
 const Cuentas = () => {
   return (
 
     <div className="" >
-      <Navbar/>
+      {/* <Navbar/> */}
       <h1>Mis cuentas</h1>
       <h2>Registro de cuentas</h2>
 
       <div>
         
-        <Sidebar />
         <div />
 
         <form className="registro-cuentas mx-auto col-9 ">
